@@ -16,15 +16,16 @@ const port = process.env.PORT || 8800;
 
 const app = express();
 
-// ✅ FIXED CORS (LOCAL + DEPLOY BOTH)
+// CORS
 app.use(
   cors({
     origin: [
       "http://localhost:3000",
       "http://localhost:3001",
       "https://mern-task-manager-app.netlify.app",
+      "https://task-abef4pion-abhishek-singh-007s-projects.vercel.app",
     ],
-    credentials: true, // 🔥 VERY IMPORTANT
+    credentials: true,
   }),
 );
 
@@ -33,7 +34,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
-// optional logger
+// logger
 app.use(morgan("dev"));
 
 // routes
@@ -44,4 +45,6 @@ app.use(routeNotFound);
 app.use(errorHandler);
 
 // start server
-app.listen(port, () => console.log(`Server listening on ${port}`));
+app.listen(port, () => {
+  console.log(`Server listening on ${port}`);
+});
