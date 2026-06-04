@@ -23,7 +23,7 @@ app.use(
       "http://localhost:3000",
       "http://localhost:3001",
       "https://mern-task-manager-app.netlify.app",
-      "https://task-abef4pion-abhishek-singh-007s-projects.vercel.app",
+      "https://task-man-rose.vercel.app",
     ],
     credentials: true,
   }),
