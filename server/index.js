@@ -19,12 +19,7 @@ const app = express();
 // CORS
 app.use(
   cors({
-    origin: [
-      "http://localhost:3000",
-      "http://localhost:3001",
-      "https://mern-task-manager-app.netlify.app",
-      "https://task-man-rose.vercel.app",
-    ],
+    origin: true,
     credentials: true,
   }),
 );
